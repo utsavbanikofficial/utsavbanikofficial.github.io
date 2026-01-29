@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utsav Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 8px rgba(0, 140, 255, 0.4); }
+      100% { box-shadow: 0 0 16px rgba(0, 140, 255, 0.8); }
+    }
+    .glow-hover:hover {
+      animation: glowPulse 0.8s alternate infinite;
+    }
+    .gradient-hover {
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+      background-size: 200% 200%;
+      transition: 0.6s;
+    }
+    .gradient-hover:hover {
+      background-position: right center;
+    }
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px,-40px) scale(1.2); }
+    }
+</style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start pt-10 bg-[#001d3d] text-gray-900 relative overflow-hidden """>
+
+  <!-- Floating particles -->
+  <div class="pointer-events-none absolute inset-0 overflow-hidden">
+    <div class="absolute w-64 h-64 bg-blue-400 opacity-20 rounded-full blur-3xl top-10 left-10 animate-pulse"></div>
+    <div class="absolute w-72 h-72 bg-purple-400 opacity-20 rounded-full blur-3xl bottom-10 right-10 animate-pulse"></div>
+  </div>
+
+  <!-- Logo -->
+  <div class="w-full flex justify-center items-center mt-4 animate-[floatUp_1s_ease-out]">
+    <img src="assets/logo.png" alt="Logo" class="w-28 sm:w-32 mb-6" />
+  </div>
+
+  <!-- Name -->
+  <h1 class="text-3xl sm:text-5xl max-w-[90%] text-center sm:text-5xl font-bold tracking-wide animate-[floatUp_1s_ease-out] text-white">
+    Hey, i am <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600 drop-shadow-lg">Utsav.</span>
+  </h1>
+
+  <!-- Hero Subtext -->
+  <h2 class="text-base sm:text-xl max-w-[90%] mx-auto sm:text-xl mt-6 text-blue-200 text-center px-4 animate-[floatUp_1.3s_ease-out]">A 19-year-old full-stack web developer with a passion for turning creative ideas into interactive digital experiences.</h2>
+
+  <p class="mt-6 max-w-[90%] mx-auto text-blue-100 text-center text-base sm:text-lg animate-[floatUp_1.6s_ease-out]">
+    Reach out using any of the platforms below.
+  </p>
+
+  <!-- Icons Row -->
+  <div class="flex flex-wrap max-w-[95%] mx-auto justify-center justify-center gap-6 mt-10 animate-[floatUp_2s_ease-out]">
+    <!-- Email -->
+    <a href="mailto:utsavbanik@outlook.com" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" class="w-8 invert" />
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/utsav-banik" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" class="w-8 invert" />
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/utsav_xd_/" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" class="w-8 invert" />
+    </a>
+
+    <!-- Discord -->
+    <a href="https://discord.com/users/1036937425047535656" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/discord.svg" class="w-8 invert" />
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/MrGill16" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" class="w-8 invert" />
+    </a>
+
+    <!-- X / Twitter -->
+    <a href="https://x.com/Chill16Mr2071" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" class="w-8 invert" />
+    </a>
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@utsav_banik" target="_blank" class="bg-white/10 backdrop-blur-xl p-4 rounded-full glow-hover transition cursor-pointer">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" class="w-8 invert" />
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="absolute bottom-4 text-blue-300 text-sm opacity-60">© Utsav — Contact Page</footer>
+
+<script>
+    document.addEventListener('mousemove', e => {
+      document.body.style.setProperty('--x', e.clientX + 'px');
+      document.body.style.setProperty('--y', e.clientY + 'px');
+    });
+  </script>
+</body>
+</html>
